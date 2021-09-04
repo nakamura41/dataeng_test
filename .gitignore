@@ -4,3 +4,6 @@ section1/logs/*
 section1/plugins/*
 section1/.env
 section1/airflow.sh
+
+*node_modules
+*.pyc
