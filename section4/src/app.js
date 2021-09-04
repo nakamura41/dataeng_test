@@ -1,6 +1,6 @@
-var margin = { top: 10, right: 20, bottom: 30, left: 30 };
+var margin = { top: 10, right: 20, bottom: 30, left: 50 };
 var width = 800 - margin.left - margin.right;
-var height = 300 - margin.top - margin.bottom;
+var height = 400 - margin.top - margin.bottom;
 
 var svg = d3.select('.chart')
     .append('svg')
@@ -11,7 +11,7 @@ var svg = d3.select('.chart')
     .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
 
-var url = 'https://api.covid19api.com/country/singapore/status/confirmed?from=2020-03-01T00:00:00Z&to=2020-04-01T00:00:00Z';
+var url = 'https://api.covid19api.com/country/singapore/status/confirmed?from=2020-03-01T00:00:00Z&to=2021-09-01T00:00:00Z';
 
 d3.json(url, function (err, data) {
     var parseTime = d3.timeParse('%Y-%m-%dT%H:%M:%SZ');
@@ -29,7 +29,7 @@ d3.json(url, function (err, data) {
     svg
         .append('g')
         .attr('transform', `translate(0, ${height})`)
-        .call(d3.axisBottom(xScale).ticks(5));
+        .call(d3.axisBottom(xScale).ticks(10));
 
     var yScale = d3.scaleLinear()
         .domain([
