@@ -13,7 +13,7 @@ var svg = d3.select('.chart')
 
 var url = 'https://api.covid19api.com/country/singapore/status/confirmed?from=2020-03-01T00:00:00Z&to=2021-09-01T00:00:00Z';
 
-d3.json(url, function (err, data) {
+d3.json(url).then(function (data) {
     var parseTime = d3.timeParse('%Y-%m-%dT%H:%M:%SZ');
     data.forEach(function (record, index) {
         record.Date = parseTime(record.Date);
