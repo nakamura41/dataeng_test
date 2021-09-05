@@ -29,6 +29,10 @@ Your team also needs you to query some information from the database that you ha
 
 ## Solution
 
+ER Diagram
+
+![ER Diagram](img/ERD.png)
+
 In order to run the docker image.
 ```
 $ docker compose up -d
