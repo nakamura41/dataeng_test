@@ -1,0 +1,19 @@
+SELECT 
+cr.Manufacturer, 
+EXTRACT(YEAR FROM s.SaleDate) AS Year, 
+EXTRACT(MONTH FROM s.SaleDate) AS Month, 
+COUNT(s.Id) AS TotalSales
+FROM
+dealership.Sale s
+INNER JOIN
+dealership.Car as cr
+ON s.CarId = cr.Id
+WHERE 
+EXTRACT(YEAR FROM s.SaleDate) = EXTRACT(YEAR FROM CURRENT_DATE) AND
+EXTRACT(MONTH FROM s.SaleDate) = EXTRACT(MONTH FROM CURRENT_DATE)
+GROUP BY
+cr.Manufacturer, 
+EXTRACT(YEAR FROM s.SaleDate), 
+EXTRACT(MONTH FROM s.SaleDate)
+ORDER BY TotalSales DESC
+FETCH FIRST 3 ROWS ONLY
