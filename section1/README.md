@@ -21,4 +21,9 @@ Make sure that docker and docker compose are installed in the machine and we hav
 $ cd dataeng_test/section1 && docker compose up -d
 ```
 
-Enable 
+Login using these Airflow credentials:
+
+- username: airflow
+- password: airflow
+
+Please enable the first DAG, "etl_job" and let it run.
