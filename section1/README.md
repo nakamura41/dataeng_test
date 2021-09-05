@@ -12,3 +12,13 @@ Processing tasks:
 - Create a new field named `above_100`, which is `true` if the price is strictly greater than 100
 
 *Note: please submit the processed dataset too.
+
+## Solution
+
+Make sure that docker and docker compose are installed in the machine and we have allocated more than 4.2GB for Docker to run.
+
+```
+$ cd dataeng_test/section1 && docker compose up -d
+```
+
+Enable 

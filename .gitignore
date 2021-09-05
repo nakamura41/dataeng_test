@@ -7,3 +7,4 @@ section1/airflow.sh
 
 *node_modules
 *.pyc
+*venv

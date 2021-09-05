@@ -6,3 +6,12 @@ Your team decided to design a dashboard to display the statistic of COVID19 case
 Your team decided to use the public data from https://documenter.getpostman.com/view/10808728/SzS8rjbc#b07f97ba-24f4-4ebe-ad71-97fa35f3b683.
 
 Display a graph to show the number cases in Singapore over time using the APIs from https://covid19api.com/.
+
+## Solution
+
+We assume that Node.js and npm has been installed on the machine.
+```
+$ npm install browser-sync
+$ npm install d3
+$ npm start
+```
