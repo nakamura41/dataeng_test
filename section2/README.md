@@ -26,3 +26,20 @@ Your team also needs you to query some information from the database that you ha
 1) I want to know the list of our customers and their spending.
 
 2) I want to find out the top 3 car manufacturers that customers bought by sales (quantity) and the sales number for it in the current month.
+
+## Solution
+
+In order to run the docker image.
+```
+$ docker compose up -d
+```
+
+Query 1
+```
+$ docker compose exec db psql postgres postgres -f /opt/data/query1.sql
+```
+
+Query 2
+```
+$ docker compose exec db psql postgres postgres -f /opt/data/query2.sql
+```

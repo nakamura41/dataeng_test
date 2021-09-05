@@ -4,10 +4,11 @@ version: '3.1'
 services:
 
   db:
-    image: postgres
+    image: postgres-section2
+    build: .
     restart: always
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: postgres
 
   adminer:
     image: adminer
