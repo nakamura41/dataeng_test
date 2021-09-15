@@ -3,8 +3,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import OrdinalEncoder
 
 if __name__ == "__main__":
-    df = pd.read_csv("data/ca"
-                     "r.data", header=None, engine="c")
+    df = pd.read_csv("data/car.data", header=None, engine="c")
     df = df.rename({
         0: "buying",
         1: "maint",
